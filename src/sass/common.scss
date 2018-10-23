@@ -1,7 +1,7 @@
 :global(.row) {
   display: block;
-	min-height: 1%;
-	width: 100%;
+  min-height: 1%;
+  width: 100%;
 
   &::after {
     display: block;
@@ -14,19 +14,19 @@
 }
 
 :global(.flex) {
-	display: flex;
+  display: flex;
 }
 
 :global(.left) {
-	justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 :global(.center) {
-	justify-content: center;
+  justify-content: center;
 }
 
 :global(.right) {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 :global(.start) {
@@ -34,13 +34,13 @@
 }
 
 :global(.middle) {
-	align-items: center;
+  align-items: center;
 }
 
 :global(.end) {
-	align-items: flex-end;
+  align-items: flex-end;
 }
 
 :global(.column) {
-	flex-direction: column;
+  flex-direction: column;
 }

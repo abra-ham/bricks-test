@@ -1,3 +1,1 @@
-import AccountValue from './AccountValue';
-
-export default AccountValue;
+export { default } from './AccountValue';

@@ -14,18 +14,18 @@ import estimatedRent from './svg/estimated-rent.svg';
 import actualRent from './svg/actual-rent.svg';
 
 export default {
-	actualRent,
-	estimatedRent,
-	handshake,
-	settings,
-	logout,
-	notification,
-	availableBricks,
-	buy,
-	sell,
-	help,
-	movements,
-	fundsAdd,
-	fundsWithdraw,
-	myAccountOn
+  actualRent,
+  estimatedRent,
+  handshake,
+  settings,
+  logout,
+  notification,
+  availableBricks,
+  buy,
+  sell,
+  help,
+  movements,
+  fundsAdd,
+  fundsWithdraw,
+  myAccountOn
 };
