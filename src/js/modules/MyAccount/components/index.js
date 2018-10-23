@@ -5,9 +5,9 @@ import MyRentsPanel from './MyRentsPanel';
 import TransactionsPanel from './TransactionsPanel';
 
 export {
-	AccountValue,
-	ProfitsPanel,
-	BricksPanel,
-	MyRentsPanel,
-	TransactionsPanel
+  AccountValue,
+  ProfitsPanel,
+  BricksPanel,
+  MyRentsPanel,
+  TransactionsPanel
 };

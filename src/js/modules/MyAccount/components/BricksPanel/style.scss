@@ -1,91 +1,91 @@
 .bricks-panel {
-	:last-child {
-		max-height: 214px;
-	}
+  :last-child {
+    max-height: 214px;
+  }
 
-	.info-container {
-		height: 100%;
-		width: 20%;
-		background-color: $gray;
-		color: $black;
-		border-top-left-radius: 8px;
-		border-bottom-left-radius: 8px;
-		border-right: $header-border;
+  .info-container {
+    height: 100%;
+    width: 20%;
+    background-color: $gray;
+    color: $black;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: $header-border;
 
-		.main-info {
-			position: relative;
+    .main-info {
+      position: relative;
 
-			img {
-				margin-top: 29px;
-				margin-bottom: 9px;
-			}
-			
-			span {
-				margin-bottom: 9px;
-				font-size: 28px;
-				font-weight: bold;
-			}
+      img {
+        margin-top: 29px;
+        margin-bottom: 9px;
+      }
+      
+      span {
+        margin-bottom: 9px;
+        font-size: 28px;
+        font-weight: bold;
+      }
 
-			&:after {
-				position: absolute;
-				content: '';
-				height: 1px;
-				background-color: $border-color;
-				bottom: 0;
-				left: 15px;
-				right: 9px;
-			}
-		}
+      &:after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        background-color: $border-color;
+        bottom: 0;
+        left: 15px;
+        right: 9px;
+      }
+    }
 
-		.secondary-info {
-			min-height: 95px;
+    .secondary-info {
+      min-height: 95px;
 
-			.info {
-				color: $black;
+      .info {
+        color: $black;
 
-				:first-child {
-					max-width: 91px;
-					font-size: 14px;
-					text-align: center;
-				}
+        :first-child {
+          max-width: 91px;
+          font-size: 14px;
+          text-align: center;
+        }
 
-				:last-child {
-					font-size: 25px;
-				}
-			}
+        :last-child {
+          font-size: 25px;
+        }
+      }
 
-			.border-icon {
-				position: relative;
-				
-				&::before {
-					display: block;
-					content: '';
-					position: absolute;
-					top: -30px;
-					bottom: 30px;
-					width: 1px;
-					background: $border-color;
-					left: 45%;
-					margin: 0;
-				}
+      .border-icon {
+        position: relative;
+        
+        &::before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: -30px;
+          bottom: 30px;
+          width: 1px;
+          background: $border-color;
+          left: 45%;
+          margin: 0;
+        }
 
-				&::after {
-					display: block;
-					content: '';
-					position: absolute;
-					top: 30px;
-					bottom: -25px;
-					width: 1px;
-					background: $border-color;
-					left: 45%;
-					margin: 0;
-				}
-			}
-		}
-	}
+        &::after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 30px;
+          bottom: -25px;
+          width: 1px;
+          background: $border-color;
+          left: 45%;
+          margin: 0;
+        }
+      }
+    }
+  }
 
-	.graph {
-		height: 100%;
-		width: 80%;
-	}
+  .graph {
+    height: 100%;
+    width: 80%;
+  }
 }

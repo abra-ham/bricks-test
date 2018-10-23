@@ -1,9 +1,9 @@
 @mixin button($background-color, $text-color) {
-	display: inline-block;
-	background-color: $background-color;
-	color: $text-color;
-	cursor: pointer;
-	padding: 0 20px;
+  display: inline-block;
+  background-color: $background-color;
+  color: $text-color;
+  cursor: pointer;
+  padding: 0 20px;
   box-sizing: border-box;
   height: 40px;
   border-radius: 24px;
@@ -12,7 +12,7 @@
   font-weight: bold;
   transition: all 0.5s ease;
 
-	&:hover,
+  &:hover,
   &.focus {
     background-color: darken($background-color, 40%);
     text-decoration: none;
@@ -33,5 +33,5 @@
 }
 
 .btn-primary {
-	@include button($primary-color, $white)
+  @include button($primary-color, $white)
 }
