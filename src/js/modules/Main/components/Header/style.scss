@@ -1,0 +1,48 @@
+.header {
+	display: flex;
+	height: $header-height;
+	position: absolute;
+	top: 0;
+	border-bottom: $header-border;
+	width: 100%;
+	z-index: 1;
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 126px;
+		height: 100%;
+		background-color: $side-nav-bg;
+		border-bottom: $header-border;
+
+		img {
+  		height: 35px;
+		}
+	}
+
+	.content {
+		width: calc(100% - 126px);
+
+		.profile {
+			height: 100%;
+			:first-child {
+				margin-right: 8px;
+			}
+
+			:last-child {
+				margin-right: 35px;
+			}
+		}
+
+		.actions {
+			img {
+				margin-right: 32px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

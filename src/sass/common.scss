@@ -1,0 +1,46 @@
+:global(.row) {
+  display: block;
+	min-height: 1%;
+	width: 100%;
+
+  &::after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    content: ' ';
+  }
+}
+
+:global(.flex) {
+	display: flex;
+}
+
+:global(.left) {
+	justify-content: flex-start;
+}
+
+:global(.center) {
+	justify-content: center;
+}
+
+:global(.right) {
+	justify-content: flex-end;
+}
+
+:global(.start) {
+  align-items: flex-start;
+}
+
+:global(.middle) {
+	align-items: center;
+}
+
+:global(.end) {
+	align-items: flex-end;
+}
+
+:global(.column) {
+	flex-direction: column;
+}

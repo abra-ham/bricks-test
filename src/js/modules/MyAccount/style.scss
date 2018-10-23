@@ -1,0 +1,19 @@
+.my-account {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+	.panels {
+		width: 100%;
+		display: flex;
+
+		.my-rents {
+			width: 35.5%;
+			margin-right: 2.5%;
+		}
+
+		.transactions {
+			width: 63.5%;
+		}
+	}
+}

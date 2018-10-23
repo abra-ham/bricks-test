@@ -1,0 +1,38 @@
+.panel {
+	margin-top: 34px;
+
+	.header {
+		display: flex;
+		margin-bottom: 5px;
+		width: 100%;
+
+		.title-container {
+			width: 50%;
+			
+			h1 {
+				margin: 0;
+				margin-bottom: 8px;
+				font-size: $panel-header-font-size;
+				font-weight: normal;
+				color: $black;
+				line-height: 1;
+			}
+		}
+		
+		.button-container {
+			width: 50%;
+			
+			button {
+				height: 40px;
+			}
+		}
+	}
+	
+	.body {
+		width: 100%;
+		min-height: 214px;
+		border-radius: $panel-border-radius;
+		border: $panel-border;
+		background-color: $white;
+	}
+}

@@ -1,0 +1,51 @@
+{
+  "name": "bricks-ui",
+  "version": "1.0.0",
+  "description": "UI test for 100 Ladrillos",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack-dev-server --config ./webpack/webpack.dev.js --hot",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "test",
+    "react",
+    "javascript",
+    "html",
+    "sass"
+  ],
+  "author": "Abraham López <lopezramirez.antonioabraham@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-react-css-modules": "^3.4.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.4",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "highcharts-react-official": "^1.4.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  }
+}
