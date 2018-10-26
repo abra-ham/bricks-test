@@ -29,6 +29,10 @@
   justify-content: flex-end;
 }
 
+:global(.space-between) {
+  justify-content: space-between;
+}
+
 :global(.start) {
   align-items: flex-start;
 }

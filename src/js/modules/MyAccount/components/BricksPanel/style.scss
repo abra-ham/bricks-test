@@ -1,6 +1,7 @@
 .bricks-panel {
-  :last-child {
+  section {
     max-height: 214px;
+    display: flex;
   }
 
   .info-container {
@@ -84,8 +85,95 @@
     }
   }
 
-  .graph {
+  .chart-container {
+    display: flex;
     height: 100%;
     width: 80%;
+
+    .chart {
+      display: inline;
+      max-width: 250px;
+      margin-left: 39px;
+      margin-right: 41px;
+
+      &.last {
+        margin-left: 20px;
+        margin-right: 0px;
+      }
+    }
+
+    .chart-info {
+      max-width: 250px;
+      font-size: 14px;
+      margin-top: 42px;
+
+      .title {
+        font-size: 20px;
+        color: $black;
+        margin-bottom: 13px;
+      }
+
+      .color {
+        width: 17px;
+        height: 14px;
+        margin-right: 9px;
+
+        &.green {
+          background-color: #3ab398;
+        }
+
+        &.light-green {
+          border: solid 1px #72c1af;
+          background-color: #d9fff7;
+          box-sizing: border-box;
+          margin-right: 8px;
+        }
+
+        &.blue {
+          background-color: #306aae;
+        }
+
+        &.light-blue {
+          background-color: #4a90e2;
+        }
+
+        &.lighter-blue {
+          background-color: #8bb6ea;
+        }
+
+        &.lightest-blue {
+          box-sizing: border-box;
+          border: solid 1px #306aae;
+          background-color: #daebff;
+          margin-right: 5px;
+        }
+      }
+
+      .type {
+        min-width: 95px;
+      }
+
+      .gains {
+        width: 60px;
+      }
+
+      .percentage {
+        font-weight: bold;
+        width: 30px;
+      }
+
+      .amount {
+        width: 10px;
+      }
+
+      .total {
+        width: 200px;
+        display: inline-block;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid $border-color;
+        text-align: right;
+      }
+    }
   }
 }

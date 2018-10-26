@@ -4,12 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, '..'),
   entry: {
-    app: './src/js/index.js'
+    app: path.resolve(__dirname, '../src/js/index.js')
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    path: path.resolve(__dirname, '../dist'),
   },
   module: {
     rules: [

@@ -4,8 +4,10 @@
   "description": "UI test for 100 Ladrillos",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config ./webpack/webpack.dev.js --hot",
-    "build": "webpack --mode production"
+    "start:dev": "webpack-dev-server --config ./webpack/webpack.dev.js --hot --open",
+    "build": "webpack --config ./webpack/webpack.prod.js",
+    "start:middleware": "node ./middleware/server.js",
+    "start:prod": "node ./server/"
   },
   "keywords": [
     "test",
@@ -42,10 +44,13 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
     "highcharts-react-official": "^1.4.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "request-promise-native": "^1.0.5"
   }
 }

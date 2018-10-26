@@ -1,13 +1,10 @@
 .sidenav {
   width: $side-nav-width;
-  height: calc(100% - 282px);
   position: absolute;
-  top: 76px;
+  top: $header-height;
   left: 0;
-  z-index: 999;
-  margin: 0;
+  bottom: 0;
   background-color: $side-nav-bg;
-  padding: 0;
   
   .item-list {
     list-style: none;

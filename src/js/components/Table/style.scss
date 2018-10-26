@@ -1,0 +1,112 @@
+.table {
+  margin: 20px 0 0;
+  border-top: 1px solid $gray;
+  width: 100%;
+
+  &.hover {
+    tbody {
+      tr {
+        cursor: pointer;
+
+        &:hover {
+          z-index: 1;
+          box-shadow: 0 0 8px 3px $gray;
+        }
+      }
+    }
+  }
+}
+
+.table-row {
+  display: flex;
+  padding: 0;
+  width: 100%;
+
+  td {
+    display: flex;
+    padding-right: 10px;
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left: 18.5px;
+    }
+
+    &:last-child {
+      padding-right: 25px;
+    }
+
+    > div {
+      width: 100%;
+    }
+
+    &.empty {
+      width: 80px;
+    }
+  }
+}
+
+.table-header,
+.table-footer {
+  display: flex;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 14px;
+
+  tr {
+    border: 0;
+    width: 100%;
+  }
+
+  td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.table-body {
+  display: block;
+
+  tr {
+    transition: box-shadow 0.3s ease, background-color 0.4s ease;
+    background-color: $white;
+    min-height: 44px;
+
+    &:nth-child(even) {
+      background-color: $table-alternate-color;
+    }
+  }
+
+  td {
+    align-items: center;
+    color: $black;
+  }
+}
+
+.custom-table-header {
+  height: 50px;
+  margin-top: 0px;
+  background-color: $table-header-color;
+  color: $white;
+  font-size: 12px;
+  font-weight: bold;
+  
+  span {
+    display: inline-block;
+    cursor: pointer;
+    max-width: calc(100% - 10px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .unsortable {
+    cursor: default;
+  }
+}

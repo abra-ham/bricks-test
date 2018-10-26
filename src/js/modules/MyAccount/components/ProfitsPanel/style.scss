@@ -124,6 +124,14 @@
 			background-color: #9c9c9c;
 			border-bottom-right-radius: 5px;
 			color: $white;
+
+			span {
+				&:first-child {
+					padding-left: 5%;
+				}
+
+				width: calc(100% / 12);
+			}
 		}
 	}
 }

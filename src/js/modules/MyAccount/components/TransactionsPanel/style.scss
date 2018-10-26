@@ -1,7 +1,7 @@
 .transactions-panel {
   > section {
-    //padding: 27px 0 27px 31px;
     max-width: 767px;
+    margin-bottom: 40px;
   }
 
   .icon {
@@ -66,6 +66,7 @@
   }
 
   .graph {
-    margin-top: 63px
+    margin-top: 63px;
+    padding : 0 20px 38px 20px;
   }
 }

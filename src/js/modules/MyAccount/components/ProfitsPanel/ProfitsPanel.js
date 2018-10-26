@@ -2,87 +2,28 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
+import formatAmount from '../../../../lib/formatAmount';
 import { Icon, Panel } from '../../../../components';
 
+import options from './chartOptions';
 import './style.scss';
-
-const options = {
-  legend: { 
-    align: 'right',
-    verticalAlign: 'top',
-    x: -25,
-    y: 1,
-    floating: true,
-    borderWidth: 0,
-  },
-  chart: {
-    height: '484px',
-    marginLeft: 1,
-    marginRight: 1,
-    marginTop: 0,
-    borderRadius: 7,
-    style: {
-      fontFamily: 'Roboto',
-    }
-  },
-  tooltip: {
-    headerFormat: '<span style="text-align: center">4</span>',
-    backgroundColor: '#757171',
-    borderWidth: 0,
-    borderRadius: 0,
-    shadow: false,
-    formatter: function () {
-      let s = '<b>' + this.y + '</b>';
-      return s;
-    },
-  },
-  yAxis: {
-    gridLineColor: 'rgba(211, 214, 225, 0.26)',
-    gridLineWidth: 2,
-    title: false,
-    labels: {
-      align: 'left',
-      x: 7,
-      y: 27.5
-    }
-  },
-  title: false,
-  plotOptions: {
-    line: {
-      lineWidth: 0.7,
-      marker: { enabled: false },
-    }
-  },
-  series: [
-    {
-      color: '#80afcc',
-      data: [1, 2, 3]
-    },
-    {	
-      color: '#7ed321',
-      data: [4, 5, 6]
-    },{	
-      color: 'red',
-      data: [7, 8, 9]
-    },
-  ]
-};
 
 const BorderIcon = () => (
   <div styleName="icon-container">
     <div styleName="icon-border icon-border-left"></div>
-    <Icon name="settings" />
+    <Icon name="minus" height="22" width="22" />
     <div styleName="icon-border icon-border-right"></div>
   </div>
 );
 
-const ProfitsPanel = () => {
+const ProfitsPanel = ({ data }) => {
+  const { profit } = data;
   return (
     <Panel title="Mis Rendimientos" id="profits" styleName="profits-panel">
       <div id="info" styleName="info-container">
         <div className="flex center middle column" styleName="info">
           <span>Mi Rendimiento:</span>
-          <span>$435,000</span>
+          <span>{formatAmount(profit)}</span>
         </div>
         <div className="flex left middle" styleName="item">
           <Icon name="estimatedRent" width="32" />
@@ -109,7 +50,7 @@ const ProfitsPanel = () => {
         </div>
         <BorderIcon />
         <div className="flex left middle" styleName="item last">
-          <Icon name="estimatedRent" width="32" />
+          <Icon name="actualYearlyRent" height="35" />
           <div className="flex left column">
             <span>Otros:</span>
             <span>$435,000</span>
@@ -117,7 +58,7 @@ const ProfitsPanel = () => {
         </div>
       </div>
       <div id="graph" styleName="graph">
-        <HighchartsReact highcharts={Highcharts} options={options} />
+        <HighchartsReact highcharts={Highcharts} options={options(data.transactions)} />
         <div styleName="box" className="flex center middle">
           <span>Ene</span>
           <span>Feb</span>

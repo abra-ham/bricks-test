@@ -12,6 +12,9 @@ import myAccountOn from './svg/my-account-on.svg';
 import handshake from './svg/handshake.svg';
 import estimatedRent from './svg/estimated-rent.svg';
 import actualRent from './svg/actual-rent.svg';
+import actualYearlyRent from './svg/actual-yearly-rent.svg';
+import estimatedAnualRent from './svg/estimated-anual-rent.svg';
+import minus from './svg/minus.png';
 
 export default {
   actualRent,
@@ -27,5 +30,8 @@ export default {
   movements,
   fundsAdd,
   fundsWithdraw,
-  myAccountOn
+  myAccountOn,
+  actualYearlyRent,
+  estimatedAnualRent,
+  minus
 };

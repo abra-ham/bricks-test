@@ -5,7 +5,7 @@ import ProfilePicXL from '../../../../../assets/img/profile-pic@3x.png';
 
 import { Icon } from '../../../../components';
 
-const Header = () => {
+const Header = ({ userName }) => {
   return (
     <header styleName="header">
       <div id="logo" styleName="logo">
@@ -14,7 +14,7 @@ const Header = () => {
       <div styleName="content" className="flex right middle">
         <div id="profile" className="flex center middle" styleName="profile">
           <img src={ProfilePicXL} alt="profile-picture" height="34" width="35" />
-          <span>Mariana García</span>
+          <span>{userName}</span>
         </div>
         <div styleName="actions">
           <Icon name="settings" />

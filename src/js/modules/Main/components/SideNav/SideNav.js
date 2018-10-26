@@ -2,19 +2,24 @@ import React from 'react';
 import cx from 'classnames'
 import { Link } from 'react-router-dom';
 
+import formatAmount from '../../../../lib/formatAmount';
+import sum from '../../../../lib/sum';
 import { Icon } from '../../../../components';
 
 import './style.scss';
 
-const items = [
-  { 
+const dynamicItems = (accountValue, availableFunds) => {
+  return [{ 
     text: 'Valor de la cuenta',
-    value: '$1.000.000',
+    value: formatAmount(accountValue),
   },
   {
     text: 'Saldo disponible',
-    value: '$10.000',
-  },
+    value: formatAmount(availableFunds),
+  }]
+}
+
+const staticItems = [
   {
     text: 'Mi cuenta',
     icon: 'myAccountOn',
@@ -83,10 +88,13 @@ const Item = ({ text, icon, to, active, value }) => {
   );
 }
 
-const ItemList = ({ pathname, items }) => {
+const ItemList = ({ pathname, staticItems, dynamicItems }) => {
   return (
     <ul styleName="item-list">
-      {items.map((item, index) => {
+      {dynamicItems.map((item, index) => {
+        return <Item {...item} key={index} />
+      })}
+      {staticItems.map((item, index) => {
         const active = item.to && item.to === pathname;
         return <Item {...item} key={index} active={active} />
       })}
@@ -94,10 +102,14 @@ const ItemList = ({ pathname, items }) => {
   )
 }
 
-const SideNav = ({ pathname }) => {
+const SideNav = ({ pathname, ...props }) => {
   return (
     <div id="sidenav" styleName="sidenav">
-      <ItemList items={items} pathname={pathname} />
+      <ItemList
+        staticItems={staticItems}
+        dynamicItems={dynamicItems(sum('object', props), props.available_cash)}
+        pathname={pathname}
+      />
     </div>
   )
 }

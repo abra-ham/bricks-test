@@ -1,7 +1,11 @@
+// -webkit-clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+// clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+
 .account-value {
   width: 100%;
   height: 90px;
   display: flex;
+  align-items: center;
   border-radius: 8px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.14);
   border: solid 1px #ebebeb;
@@ -13,23 +17,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: $black;
 
     :first-child {
       font-size: 14px;
     }
 
-    :last-child {
+    :nth-child(2) {
       font-size: 18px;
       font-weight: bold;
     }
 
-    &.polygon {
+    &.polygon-container {
       position: relative;
       min-width: 245px;
       background-color: $white;
-      -webkit-clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
-      clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+      border-right: 2px solid $border-color;
+
       z-index: 1;
 
       :first-child {
@@ -57,5 +62,17 @@
     &.green {
       color: green;
     }
+  }
+
+  .free-rent {
+    font-size: 16px;
+    font-weight: bold;
+    color: $primary-color;
+    text-decoration: underline;
+  }
+
+  .green {
+    color: $green;
+    font-size: 18px;
   }
 }

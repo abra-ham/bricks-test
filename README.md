@@ -6,25 +6,25 @@ Instala las dependencias del cliente dentro de la carpeta raíz:
 
 `npm i`
 
-Después las del middlewarw, dentro de la carpeta `/middleware`:
-
-`cd middleware && npm i`
-
 ## Ejecución
 
-### Middleware
+### Fake Bricks API
 
+Correr en el puerto 9001
 `npm run start`
 
 ### Cliente
-
-#### Prod
-`npm run build && npm run start-prod`
 
 #### Dev
 
 `npm run start-dev`
 
+#### Prod
 
+`npm run build`
+
+`npm run start:prod`
+
+Navega a [localhost:9000/my-account](localhost:9000/my-account)
 
 
